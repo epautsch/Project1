@@ -2,10 +2,15 @@ import java.util.ArrayList;
 
 public class Building implements FacilityUse{
     public String name;
+    private int buildingNumber;
     public int numFloors;
     public int roomsPerFloor;
     public int maxPatientCapacity;
     public ArrayList<Room> currentVacancies;
+
+    public int getBuildingNumber() {
+        return buildingNumber;
+    }
 
     public boolean isInUseDuringInterval() {
         return false;
