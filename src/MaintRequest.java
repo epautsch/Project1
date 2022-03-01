@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 
 public class MaintRequest {
-    static int lastRequest;
-    private int requestNumber;
+    static int lastRequestID;
+    private int requestID;
     private ArrayList<Maintenance> listProblems;
     private Room room;
     private Building building;
     private boolean requestStatus; // true is open, false is closed. Default is true.
 
     public MaintRequest(ArrayList<Maintenance> maintList, Room r, Building b) {
-        requestNumber = lastRequest + 1;
-        lastRequest += 1;
+        requestID = lastRequestID + 1;
+        lastRequestID += 1;
         listProblems = maintList;
         room = r;
         building = b;
         requestStatus = true;
     }
 
-    public int getRequestNumber() {
-        return requestNumber;
+    public int getRequestID() {
+        return requestID;
     }
 
     public ArrayList<Maintenance> getListProblems() {
@@ -26,11 +26,11 @@ public class MaintRequest {
     }
 
     public int getRoomNumber() {
-        return room.getRoomNumber();
+        return room.getRoomID();
     }
 
     public int getBuildingNumber() {
-        return building.getBuildingNumber();
+        return building.getBuildingID();
     }
 
     public boolean getRequestStatus() {

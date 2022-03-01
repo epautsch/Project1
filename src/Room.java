@@ -2,7 +2,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Room {
-    private int roomNumber;
+    private int roomID;
     private Building building;
     private int capacity;
     private ArrayList<Patient> patients;
@@ -13,15 +13,15 @@ public class Room {
     }
 
     public Room(int roomNum, Building bldng, int cap) {
-        roomNumber = roomNum;
+        roomID = roomNum;
         building = bldng;
         capacity = cap;
         patients = new ArrayList<Patient>();
         equipment = new ArrayList<Equipment>();
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
+    public int getRoomID() {
+        return roomID;
     }
 
     public Building getBuilding() {
