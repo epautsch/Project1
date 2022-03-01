@@ -1,62 +1,37 @@
-import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class MaintAppt {
-    static int lastApptID;
-    private int maintApptID;
-    private ArrayList<Employee> employeeList;
+public class MaintAppt extends Appointment {
+    private ArrayList<Maintenance> listMaintenance;
     private MaintRequest maintRequest;
-    private Building apptBuilding;
-    private Room apptRoom;
-    private LocalTime apptStartTime;
 
-    public MaintAppt(MaintRequest request, Building building, Room room) {
-        maintApptID = lastApptID + 1;
-        lastApptID += 1;
-        employeeList = new ArrayList<>();
-        maintRequest = request;
-        apptBuilding = building;
-        apptRoom = room;
-        apptStartTime = LocalTime.now();
+    public MaintAppt(MaintRequest requst, Building building, Room room, LocalTime startTime) {
+        super(building, room, startTime);
+        listMaintenance = new ArrayList<>();
+        maintRequest = requst;
     }
-
-    public ArrayList<Employee> getEmployeeList() {
-        return employeeList;
+    
+    public ArrayList<Maintenance> getListMaintenance() {
+        return listMaintenance;
     }
-
-    public void addEmployee(Employee employee) {
-        employeeList.add(employee);
+    
+    public void addMaintenance(Maintenance maintenance) {
+        listMaintenance.add(maintenance);
     }
-
-    public boolean removeEmployee(int employeeID) {
-        for (Employee e :
-                employeeList) {
-            if (e.getEmployeeID() == employeeID) {
-                employeeList.remove(e);
+    
+    public boolean removeMaintenance(int maintenanceType) {
+        for (Maintenance m :
+                listMaintenance) {
+            if (m.getMaintenanceType() == maintenanceType) {
+                listMaintenance.remove(m);
                 return true;
             }
         }
         return false;
     }
 
-    public Building getApptBuilding() {
-        return apptBuilding;
-    }
-
-    public Room getApptRoom() {
-        return apptRoom;
-    }
-
     public MaintRequest getMaintRequest() {
         return maintRequest;
     }
 
-    public LocalTime getApptStartTime() {
-        return apptStartTime;
-    }
-
-    public Duration getApptDuration() {
-        return Duration.between(apptStartTime, LocalTime.now());
-    }
 }
