@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public interface Facility {
-    public ArrayList<String> listFacilities();
-    public String getFacilityInformation(Building bldng);
+    public ArrayList<Building> listFacilities();
+    public ArrayList<Room> getFacilityInformation(Building bldng);
     public int requestAvailableCapacity(Building bldng);
     public boolean addNewFacility(Building bldng);
     public boolean addFacilityDetail(String detail);
