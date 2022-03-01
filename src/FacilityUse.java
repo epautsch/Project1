@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public interface FacilityUse {
-    public boolean isInUseDuringInterval();
-    public Room assignFacilityToUse();
-    public Room vacateFacility();
+    public boolean isInUseDuringInterval(Room r);
+    public Room assignFacilityToUse(Appointment a);
+    public boolean vacateFacility(Room r);
     public ArrayList<Inspection> listInspections();
-    public void listActualUsage();
+    public ArrayList<Appointment> listActualUsage();
     public float calcUsageRate();
 }

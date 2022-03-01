@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class MaintRequest {
     static int lastRequestID;
@@ -21,12 +22,16 @@ public class MaintRequest {
         return requestID;
     }
 
-    public ArrayList<Maintenance> getListProblems() {
+    public Collection<? extends MaintAppt> getListProblems() {
         return listProblems;
     }
 
     public int getRoomNumber() {
         return room.getRoomID();
+    }
+
+    public Room getRoom() {
+        return room;
     }
 
     public int getBuildingNumber() {

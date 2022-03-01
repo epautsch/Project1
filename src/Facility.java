@@ -7,4 +7,7 @@ public interface Facility {
     public boolean addNewFacility(Building bldng);
     public boolean addFacilityDetail(String detail);
     public boolean removeFacility(Building bldng);
+    public void setNumRooms();
+    public void addOpenMaintRequest(MaintRequest mR);
+    public void removeOpenMaintRequest(MaintRequest mR);
 }
