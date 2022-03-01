@@ -9,7 +9,7 @@ public class Room {
     private ArrayList<Equipment> equipment;
 
     public Room(int roomNum, Building bldng) {
-        this(roomNum, bldng, 0);
+        this(roomNum, bldng, -1);
     }
 
     public Room(int roomNum, Building bldng, int cap) {
