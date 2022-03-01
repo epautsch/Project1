@@ -2,9 +2,6 @@ import java.util.ArrayList;
 
 public class Hospital implements Facility{
 
-    public ArrayList<Building> buildingsOnCampus;
-    public ArrayList<Department> departments;
-
     public ArrayList<String> listFacilities() {
         ArrayList<String> temp = new ArrayList<>();
         return temp;
@@ -18,17 +15,16 @@ public class Hospital implements Facility{
         return -1;
     }
 
-    public Building addNewFacility(String name) {
-        return new Building();
+    public boolean addNewFacility(Building bldng) {
+        return false;
     }
 
-    public void addFacilityDetail() {
-
+    public boolean addFacilityDetail(String detail) {
+        return false;
     }
 
-    public ArrayList<String> removeFavility() {
-        ArrayList<String> temp = new ArrayList<>();
-        return temp;
+    public boolean removeFacility(Building bldng) {
+        return false;
     }
 
 

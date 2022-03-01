@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Building implements  FacilityUse{
+public class Building implements FacilityUse{
     public String name;
     public int numFloors;
     public int roomsPerFloor;
@@ -11,16 +11,24 @@ public class Building implements  FacilityUse{
         return false;
     }
 
+    public Room assignFacilityToUse() {
+        return null;
+    }
+
+    public Room vacateFacility() {
+        return null;
+    }
+
     public Room assignFacilityToUse(String facility) {
-        return new Room();
+        return null;
     }
 
     public Room vacateFacility(String facility) {
-        return new Room();
+        return null;
     }
 
     public ArrayList<Inspection> listInspections() {
-        return new ArrayList<Inspection>();
+        return null;
     }
 
     public void listActualUsage() {
@@ -28,7 +36,7 @@ public class Building implements  FacilityUse{
     }
 
     public float calcUsageRate() {
-        return 0.0f;
+        return -0.01f;
     }
 
 }

@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public interface Facility {
-    public Object listFacilities();
-    public Object getFacilityInformation();
-    public Object requestAvailableCapacity();
-    public Object addNewFacility();
-    public void addFacilityDetail();
-    public Object removeFacility();
+    public ArrayList<String> listFacilities();
+    public String getFacilityInformation(Building bldng);
+    public int requestAvailableCapacity(Building bldng);
+    public boolean addNewFacility(Building bldng);
+    public boolean addFacilityDetail(String detail);
+    public boolean removeFacility(Building bldng);
 }
