@@ -1,19 +1,20 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Room {
+    static int lastRoomID;
     private int roomID;
     private Building building;
     private int capacity;
     private ArrayList<Patient> patients;
     private ArrayList<Equipment> equipment;
 
-    public Room(int roomNum, Building bldng) {
-        this(roomNum, bldng, -1);
+    public Room(Building bldng) {
+        this(bldng, 0);
     }
 
-    public Room(int roomNum, Building bldng, int cap) {
-        roomID = roomNum;
+    public Room(Building bldng, int cap) {
+        roomID = lastRoomID + 1;
+        lastRoomID += 1;
         building = bldng;
         capacity = cap;
         patients = new ArrayList<Patient>();
