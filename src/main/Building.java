@@ -18,7 +18,6 @@ public class Building {
 
     public Building(String name, int capacity) {
         buildingID = lastBuildingID + 1;
-        lastBuildingID += 1;
         buildingName = name;
         roomList = new ArrayList<>();
         maxCapacity = capacity;
@@ -27,6 +26,7 @@ public class Building {
         pastMaintReqs = new ArrayList<>();
         pendingAppts = new ArrayList<>();
         pastAppts = new ArrayList<>();
+        lastBuildingID = buildingID;
     }
 
     public String getBuildingName() {

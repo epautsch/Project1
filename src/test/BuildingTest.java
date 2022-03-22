@@ -1,11 +1,11 @@
 package test;
 
-import static
-org.junit.jupiter.api.Assertions.assertEquals;
-
 import main.Building;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class BuildingTest {
 
@@ -19,6 +19,32 @@ public class BuildingTest {
     @Test
     void testGetBuildingName() {
         assertEquals("testBuilding", building.getBuildingName());
+    }
+
+    @Test
+    void testSetBuildingName() {
+        building.setBuildingName("newName");
+        assertEquals("newName", building.getBuildingName());
+    }
+
+    @Test
+    void testGetRoomList() {
+        assertNotNull(building.getRoomList());
+    }
+
+    @Test
+    void testGetBuildingID() {
+        assertEquals(1, building.getBuildingID());
+    }
+
+    @Test
+    void testGetMaxCapacity() {
+        assertEquals(100, building.getMaxCapacity());
+    }
+
+    @Test
+    void testGetVacancies() {
+
     }
 
 
