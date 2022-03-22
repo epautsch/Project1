@@ -11,6 +11,8 @@ public class Physician extends Employee {
 
     public Physician(String name) {
         super(name);
+        previousPatients = new ArrayList<Patient>();
+        activePatients = new ArrayList<Patient>();
     }
 
     public ArrayList<Patient> getPreviousPatients() {

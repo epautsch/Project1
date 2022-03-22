@@ -1,13 +1,13 @@
 package main;
 
 public abstract class Employee {
-    static int lastEmployeeID;
+    static int lastEmployeeID = 0;
     private int employeeID;
     private String employeeName;
 
     public Employee(String name) {
         employeeID = lastEmployeeID + 1;
-        lastEmployeeID += 1;
+        lastEmployeeID = employeeID;
         employeeName = name;
     }
 
