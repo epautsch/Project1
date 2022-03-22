@@ -7,7 +7,7 @@ import main.Patient;
 import java.util.ArrayList;
 
 public class Room {
-    static int lastRoomID;
+    static int lastRoomID = 0;
     private int roomID;
     private Building building;
     private int capacity;
@@ -20,11 +20,11 @@ public class Room {
 
     public Room(Building bldng, int cap) {
         roomID = lastRoomID + 1;
-        lastRoomID += 1;
         building = bldng;
         capacity = cap;
         patients = new ArrayList<Patient>();
         equipment = new ArrayList<Equipment>();
+        lastRoomID = roomID;
     }
 
     public int getRoomID() {

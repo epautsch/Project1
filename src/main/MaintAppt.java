@@ -10,10 +10,10 @@ public class MaintAppt extends Appointment {
     private ArrayList<Maintenance> listMaintenance;
     private MaintRequest maintRequest;
 
-    public MaintAppt(MaintRequest requst, Building building, Room room, LocalTime startTime) {
+    public MaintAppt(MaintRequest request, Building building, Room room, LocalTime startTime) {
         super(building, room, startTime);
         listMaintenance = new ArrayList<>();
-        maintRequest = requst;
+        maintRequest = request;
     }
     
     public ArrayList<Maintenance> getListMaintenance() {

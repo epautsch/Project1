@@ -7,7 +7,7 @@ import main.Maintenance;
 import java.util.ArrayList;
 
 public class MaintRequest {
-    static int lastRequestID;
+    static int lastRequestID = 0;
     private int requestID;
     private ArrayList<Maintenance> listProblems;
     private Room room;
@@ -16,11 +16,11 @@ public class MaintRequest {
 
     public MaintRequest(ArrayList<Maintenance> maintList, Room r, Building b) {
         requestID = lastRequestID + 1;
-        lastRequestID += 1;
         listProblems = maintList;
         room = r;
         building = b;
         requestStatus = true;
+        lastRequestID = requestID;
     }
 
     public int getRequestID() {

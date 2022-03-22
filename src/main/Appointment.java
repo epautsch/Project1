@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public abstract class Appointment {
-    static int lastApptID;
+    static int lastApptID = 0;
     private int apptID;
     private ArrayList<Employee> employeeList;
     private Building apptBuilding;
@@ -14,11 +14,11 @@ public abstract class Appointment {
 
     public Appointment(Building building, Room room, LocalTime startTime) {
         apptID = lastApptID + 1;
-        lastApptID += 1;
         employeeList = new ArrayList<>();
         apptBuilding = building;
         apptRoom = room;
         apptStartTime = startTime;
+        lastApptID = apptID;
     }
 
     public int getApptID() {
