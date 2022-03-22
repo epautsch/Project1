@@ -1,7 +1,11 @@
+package main;
+
+import main.*;
+
 import java.util.ArrayList;
 import java.time.LocalTime;
 
-public class Hospital implements Facility, FacilityUse, FacilityMaintenance{
+public class Hospital implements Facility, FacilityUse, FacilityMaintenance {
     private ArrayList<Building> buildings;
     private ArrayList<MaintRequest> openMaintReqs;
     private ArrayList<MaintRequest> pastMaintReqs;

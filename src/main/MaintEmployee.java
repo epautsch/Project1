@@ -1,6 +1,10 @@
+package main;
+
+import main.Employee;
+
 import java.util.ArrayList;
 
-public class MaintEmployee extends Employee{
+public class MaintEmployee extends Employee {
     private ArrayList<Maintenance> previousMaintenance;
     private ArrayList<Maintenance> activeMaintenance;
 

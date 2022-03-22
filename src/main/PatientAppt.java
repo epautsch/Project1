@@ -1,3 +1,9 @@
+package main;
+
+import main.Appointment;
+import main.Building;
+import main.Patient;
+
 import java.time.LocalTime;
 
 public class PatientAppt extends Appointment {

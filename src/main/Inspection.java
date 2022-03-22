@@ -1,3 +1,7 @@
+package main;
+
+import main.Building;
+
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;

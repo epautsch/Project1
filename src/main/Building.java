@@ -1,7 +1,11 @@
+package main;
+
+import main.Appointment;
+
 import java.util.ArrayList;
 
 public class Building {
-    static int lastBuildingID;
+    static int lastBuildingID = 0;
     private int buildingID;
     private String buildingName;
     private ArrayList<Room> roomList;

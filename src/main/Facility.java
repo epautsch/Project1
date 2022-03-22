@@ -1,3 +1,7 @@
+package main;
+
+import main.Building;
+
 import java.util.ArrayList;
 
 public interface Facility {

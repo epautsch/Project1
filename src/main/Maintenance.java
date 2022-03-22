@@ -1,3 +1,5 @@
+package main;
+
 public class Maintenance {
     private int maintenanceType;
     private float maintenanceCost;

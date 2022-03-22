@@ -1,5 +1,10 @@
+package main;
+
+import main.Building;
+import main.MaintAppt;
+import main.Maintenance;
+
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class MaintRequest {
     static int lastRequestID;
@@ -22,7 +27,7 @@ public class MaintRequest {
         return requestID;
     }
 
-    public Collection<? extends MaintAppt> getListProblems() {
+    public ArrayList<Maintenance> getListProblems() {
         return listProblems;
     }
 

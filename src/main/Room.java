@@ -1,3 +1,9 @@
+package main;
+
+import main.Building;
+import main.Equipment;
+import main.Patient;
+
 import java.util.ArrayList;
 
 public class Room {

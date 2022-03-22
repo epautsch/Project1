@@ -1,6 +1,11 @@
+package main;
+
+import main.Employee;
+import main.Patient;
+
 import java.util.ArrayList;
 
-public class Physician extends Employee{
+public class Physician extends Employee {
     private ArrayList<Patient> previousPatients;
     private ArrayList<Patient> activePatients;
 

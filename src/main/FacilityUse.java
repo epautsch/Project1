@@ -1,3 +1,7 @@
+package main;
+
+import main.Appointment;
+
 import java.util.ArrayList;
 
 public interface FacilityUse {

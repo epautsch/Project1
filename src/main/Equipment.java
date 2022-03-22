@@ -1,3 +1,5 @@
+package main;
+
 public class Equipment {
     private int equipID;
 

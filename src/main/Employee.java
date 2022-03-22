@@ -1,3 +1,5 @@
+package main;
+
 public abstract class Employee {
     static int lastEmployeeID;
     private int employeeID;
