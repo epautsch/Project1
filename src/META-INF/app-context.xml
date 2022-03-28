@@ -1,15 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
     <description>Wiring dependencies for Project2</description>
 
-    <context:component-scan base-package="model"></context:>
+    <context:component-scan base-package="model" />
 
-    <bean id=""></bean>
+    <bean id="appointment" class="model.Appointment" scope="prototype" abstract="true" />
 
+    <bean id="building" class="model.Building" scope="prototype">
+        <constructor-arg index="0" value="Building 1"/>
+        <constructor-arg index="1" value="3" />
+    </bean>
+
+    <bean id="employee" class="model.Employee" scope="prototype" abstract="true">
+        <constructor-arg value="Jim"/>
+    </bean>
+
+    <bean id="equipment" class="model.Equipment" scope="prototype" />
+
+    <bean id="hospital" class="model.Hospital" scope="prototype" />
+
+    <bean id="inspection" class="model.Inspection" scope="prototype" />
+
+    <bean id="maintAppt" class="model.MaintAppt" scope="prototype" >
+        <constructor-arg index="0" ref="maintRequest"/>
+        <constructor-arg index="1" ref="building"/>
+        <constructor-arg index="2" ref="room"/>
+        <constructor-arg index="3" value="MIDNIGHT"/>
+    </bean>
+
+    <bean id="maintEmployee" class="model.MaintEmployee" scope="prototype" >
+        <constructor-arg value=""/>
+    </bean>
+
+    <bean id="maintenance" class="model.Maintenance" scope="prototype" >
+        <constructor-arg value="1"/>
+    </bean>
+
+    <bean id="maintRequest" class="model.MaintRequest" scope="prototype" />
+
+    <bean id="patient" class="model.Patient" scope="prototype" />
+
+    <bean id="patientAppt" class="model.PatientAppt" scope="prototype" >
+        <constructor-arg index="0" ref="building"/>
+        <constructor-arg index="1" ref="room"/>
+        <constructor-arg index="2" value="MIDNIGHT"/>
+        <constructor-arg index="3" ref="patient"/>
+    </bean>
+
+    <bean id="physician" class="model.Physician" scope="prototype" >
+        <constructor-arg value=""/>
+    </bean>
+
+    <bean id="room" class="model.Room" scope="prototype">
+        <constructor-arg ref="building"/>
+    </bean>
 
 
 
