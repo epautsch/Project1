@@ -1,6 +1,4 @@
-package main;
-
-import main.*;
+package model;
 
 import java.util.ArrayList;
 import java.time.LocalTime;

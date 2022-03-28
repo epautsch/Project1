@@ -1,6 +1,6 @@
 package test;
 
-import main.Patient;
+import model.Patient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

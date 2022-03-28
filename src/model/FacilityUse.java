@@ -1,6 +1,4 @@
-package main;
-
-import main.Appointment;
+package model;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,4 @@
-package main;
-
-import main.Building;
-import main.Equipment;
-import main.Patient;
+package model;
 
 import java.util.ArrayList;
 

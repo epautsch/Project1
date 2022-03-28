@@ -1,6 +1,4 @@
-package main;
-
-import main.Employee;
+package model;
 
 import java.util.ArrayList;
 

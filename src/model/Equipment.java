@@ -1,4 +1,4 @@
-package main;
+package model;
 
 public class Equipment {
     private int equipID = 1;

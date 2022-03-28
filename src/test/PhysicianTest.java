@@ -1,6 +1,6 @@
 package test;
 
-import main.Physician;
+import model.Physician;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

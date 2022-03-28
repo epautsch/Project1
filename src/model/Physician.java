@@ -1,7 +1,4 @@
-package main;
-
-import main.Employee;
-import main.Patient;
+package model;
 
 import java.util.ArrayList;
 

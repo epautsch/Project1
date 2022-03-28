@@ -1,8 +1,4 @@
-package main;
-
-import main.Appointment;
-import main.Building;
-import main.Patient;
+package model;
 
 import java.time.LocalTime;
 

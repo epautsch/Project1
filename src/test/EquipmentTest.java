@@ -1,6 +1,6 @@
 package test;
 
-import main.Equipment;
+import model.Equipment;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

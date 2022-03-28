@@ -1,7 +1,4 @@
-package main;
-
-import main.Appointment;
-import main.Building;
+package model;
 
 import java.time.LocalTime;
 import java.util.ArrayList;

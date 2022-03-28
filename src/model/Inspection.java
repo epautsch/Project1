@@ -1,6 +1,4 @@
-package main;
-
-import main.Building;
+package model;
 
 import java.time.Duration;
 import java.time.LocalTime;

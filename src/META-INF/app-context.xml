@@ -6,7 +6,7 @@
 
     <description>Wiring dependencies for Project2</description>
 
-    <context:component-scan base-package="main"></context:>
+    <context:component-scan base-package="model"></context:>
 
     <bean id=""></bean>
 

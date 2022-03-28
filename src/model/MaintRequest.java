@@ -1,8 +1,4 @@
-package main;
-
-import main.Building;
-import main.MaintAppt;
-import main.Maintenance;
+package model;
 
 import java.util.ArrayList;
 
