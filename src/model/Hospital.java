@@ -33,6 +33,9 @@ public class Hospital implements Facility, FacilityUse, FacilityMaintenance {
         this.allAppointments = new ArrayList<>();
     }
 
+    public void setBuildings(ArrayList<Building> list) {
+        this.buildings = list;
+    }
     public void addOpenMaintRequest(MaintRequest mR) {
         openMaintReqs.add(mR);
     }
